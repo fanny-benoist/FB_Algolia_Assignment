@@ -1,4 +1,4 @@
-/*// For the default version
+// For the default version
 const algoliasearch = require('algoliasearch');
 
 
@@ -38,19 +38,9 @@ index.saveObjects(contactsJSON, {
 index.setSettings({
     attributesForFaceting: [
         'searchable(city)',
-        'searchable(company)'
+        'searchable(state)',
+        'searchable(followers)'
     ]
   }).then(() => {
     // done
   });
-
-   /*index.setSettings({
-    attributesToHighlight: [
-      'company'
-    ]
-  }).then(() => {
-    // done
-  });
-  */
-
-  

@@ -8,12 +8,6 @@ html {
   height: 100%;
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
-
 .header {
   display: flex;
   text-align: center;
@@ -25,6 +19,13 @@ body {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: normal;
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -45,20 +46,20 @@ body {
   margin: 0 auto;
 }
 
-#company,
+#state,
 #city {
   margin-bottom: 24px;
 }
 
-#company,
-#city {
+#state,
+#city, #followers {
   margin-right: 24px;
   padding: 8px 0;
 }
 
-#company,
+#state,
 #city,
-#price,
+#followers,
 .ais-hits--item,
 .ais-search-box--input {
   height: auto;
@@ -72,7 +73,7 @@ body {
 }
 
 .left-panel {
-  flex: 0 0 290px;
+  flex: 0 0 360px;
 }
 
 .right-panel {
@@ -190,7 +191,7 @@ body {
   margin-bottom: 5px;
 }
 
-.hit-company {
+.hit-state {
   font-size: 14px;
   font-weight: normal;
   margin-bottom: 16px;
@@ -212,7 +213,7 @@ body {
 
 .ais-refinement-list--label,
 .ais-refinement-list--label:hover {
-  color: rgb(214, 34, 34);
+  color: black;
 }
 
 .ais-refinement-list--count {
