@@ -39,7 +39,8 @@ index.setSettings({
     attributesForFaceting: [
         'searchable(city)',
         'searchable(state)',
-        'searchable(followers)'
+        'searchable(followers)',
+        'searchable(company)'
     ]
   }).then(() => {
     // done

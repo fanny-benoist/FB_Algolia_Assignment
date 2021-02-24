@@ -41,13 +41,33 @@ instantsearch.widgets.refinementList({
   searchable: true,
   searchablePlaceholder: 'Search for a state',
   limit: 5,
-  showMore: true,
-  templates: {
-      header: 'States'
-    }
+  showMore: true
 })
 ]
 );
+
+search.addWidgets([
+  instantsearch.widgets.refinementList({
+    container: document.querySelector('#city'),
+    attribute: 'city',
+    searchable: true,
+    searchablePlaceholder: 'Search for a city',
+    limit: 5,
+    showMore: true
+  })
+]);
+
+search.addWidgets([
+  instantsearch.widgets.refinementList({
+    container: document.querySelector('#company'),
+    attribute: 'company',
+    searchable: true,
+    searchablePlaceholder: 'Search for a company',
+    limit: 5,
+    sortBy: ['name:asc'],
+    showMore: true
+  })
+]);
 
 search.addWidgets([
   instantsearch.widgets.rangeSlider({
@@ -60,24 +80,6 @@ search.addWidgets([
   })
 ]
 );
-
-search.addWidgets([
-  instantsearch.widgets.refinementList({
-    container: document.querySelector('#city'),
-    attribute: 'city',
-    searchable: true,
-    searchablePlaceholder: 'Search for a city',
-    limit: 5,
-    showMore: true,
-    templates: {
-        header: 'Cities'
-      }
-  })
-]);
-
-
-
-
 
 search.addWidget(
   instantsearch.widgets.stats({
@@ -92,6 +94,15 @@ search.addWidget(
   })
 );
 
+search.addWidget(
+  instantsearch.widgets.hitsPerPage({
+    container: '#hits-per-page',
+    items: [
+      { label: '16 contacts per page', value: 16, default: true },
+      { label: '26 contacts per page', value: 26 },
+    ]
+  })
+);
 
 search.addWidget(
   instantsearch.widgets.pagination({
