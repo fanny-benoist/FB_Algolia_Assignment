@@ -35,12 +35,20 @@ search.addWidgets([
 ]);
 
 search.addWidgets([
+  instantsearch.widgets.clearRefinements({
+    container: '#clear-refinements',
+  })
+  ]
+  );
+
+search.addWidgets([
 instantsearch.widgets.refinementList({
   container: document.querySelector('#state'),
   attribute: 'state',
   searchable: true,
   searchablePlaceholder: 'Search for a state',
   limit: 5,
+  sortBy: ['name:asc'],
   showMore: true
 })
 ]
@@ -53,6 +61,7 @@ search.addWidgets([
     searchable: true,
     searchablePlaceholder: 'Search for a city',
     limit: 5,
+    sortBy: ['name:asc'],
     showMore: true
   })
 ]);

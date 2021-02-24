@@ -64,7 +64,7 @@ body {
 }
 
 .left-panel {
-  flex: 0 0 250px;
+  flex: 0 0 300px;
 }
 
 .right-panel {
@@ -117,16 +117,19 @@ body {
   text-align: center;
 }
 
-.ais-Hits-item {
-  text-align: center;
+.ais-ClearRefinements {
+  margin: 5px 0 0px 150px;
+}
 
+.ais-ClearRefinements-button {
+  background-color: #21758a;
 }
 
 h1 {
   font-weight: bolder;
   margin: 0;
   padding: 0 0 4px;
-  font-size: inherit;
+  font-size: 20px;
   color: #21355a;
   border-bottom: 1px solid #eee;
 }
