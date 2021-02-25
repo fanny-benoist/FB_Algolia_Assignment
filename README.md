@@ -4,65 +4,75 @@
 * [Setup](#setup)
 
 ## General info
-This **Exercice1 - Answers** folder contains all code files associated with the Exercise 1.
+This folder contains all code files associated with the Part 1 & Part 2.
 
-Exercices:    
-Write a program in Python that takes in a json(sample-json.json), outputs and generates the following:
+**Assignment:**   
+> • Choose a dataset, either from our list of public datasets (https://github.com/algolia/datasets), or you can go ahead and use your own from a different source if you’d like!
+>
+> • Create an Algolia account and index the data (https://www.algolia.com/doc/guides/sending-and-managing-data/send-and-update-your-data/). You can do so via the API or dashboard, whichever you prefer.
+>
+> • Configure the basic relevance settings (https://www.algolia.com/doc/guides/getting-started/how-algolia-works/in-depth/implementation-process/) for the data (again, using the dashboard or API).
+>
+> • Build out a basic search user interface, taking care to ensure for a good user experience. Use this as an opportunity to be as creative as you would like! Feel free to use one of our InstantSearch libraries if these will ease your development.
+>
+> • Add your code to a publicly accessible Github repo and then publish it using Github’s gh-pages so we can interact with it.
+>
+> • Give Algolia admins access (https://www.algolia.com/users/sign_in) to your data so we can view your relevance settings.
+> • Write up a few paragraphs outlining your project, what you intended to accomplish, and any feedback for Algolia you have and add these to a README.
 
-- Ex 1: Number of unique shape types
-- Ex 2: Frequency of each shape and all labels associated with the shapes (for e.g. line - 'middle line': 445)
-- Ex 3: Create two different png/jpegs that visualizes the shapes i) colors are based on shape types ii) colors are based on annotation label. Checkout 3 sets of samples, Question 1 Example Images.
-The dimensions of the original image were: 3840 × 2160
+
+
+I created an app that calls Algolia search librairy to search for a person in a contact database. 
+Each records contains the attributes:
+- Last Name
+- First Name
+- Company
+- Address
+- City
+- State
+- ZIP
+- County
+- Email
+- Phone
+- Fax
+- Web
+
+You can search for a last name, a first name or a company.
+To help you get result faster, you can facet per company, state, county or followers depending on what you'r looking for.
+
+I created the index-configuration.js so that the index can be configure automatically while runn this js file, instead of having to configure manually on the dashboard. In this way, I assure the search experience will work as expected.
+
+You will notice that the front-end isn't perfectly finish. I would have required extra time to finish it. For inst
+
+But right now, you can try to search for your name, maybe you will get a result, who knows ? ;)
 
 ## Contents
-- main.py:
-  - opens sample-json.json and saves the json object as a dictonary   
-  - contains the function get_list_of_type_of_shape() that returns a list of type of shape    
-  - contains the function get_frequency_of_shape(list_of_type_of_shape) that returns a list of shape type associated to a label and their frequency   
+- index-configuration.js: (To run)
+    This file allows you to create a new Index in your dashboard with correct configurations
+  - Initialize client
+  - Push Data 
+  - Configure
 
 
-- Exercise1_launcher.py (to run):
-  - calls the get_list_of_type_of_shape() of main.py    
-  - returns the number of unique shape types        
+- contact_dataset.json:
+  - List of records       
 
+- Search UI: 
+    - index.html: front-end search using InstantSearch.js
+    - .src_search_ui/app.js: create widgets
+    - .src_search_ui/app.css: style front-end
 
-- Exercise2_launcher.py (to run):     
-  - calls the get_list_of_type_of_shape() of main.py  
-  - calls the get_frequency_of_shape(list_of_type_of_shape) of main.py    
-  - returns the frequency of each shape and all labels associated with the shapes (for e.g. line - 'middle line': 445)    
-
-
-- Exercise3_launcher.py (to run):   
-  - calls the get_list_of_type_of_shape() of main.py  
-  - calls the get_frequency_of_shape(list_of_type_of_shape) of main.py
-  - returns all points associated to a shape type and label
-  - generates 2 images that visualize the shapes i) colors are based on shape types ii) colors are based on annotation label.
-
-
-- Question 1 Exemple Images folder:   
-  - contains the samples of generated images    
-
-
-- image_color_based_label.png:     
-  - image generated when running the Exercise3_launcher.py file   
-  - visualizes the shapes where colors are based on labels    
-
-
-- image_color_based_shape.png:     
-    - image generated when run the Exercise3_launcher.py file
-    - visualizes the shapes where colors are based on shape type
-
-- Pipefiles:   
-  - Pipfiles contain information for the dependencies of the project.
+- Customer Questions:
+    - Contains answers of Customer questions
 
 
 ## Setup
 To run this project:    
 - install the git repository locally   
-- install pipenv in your system if not installed yet
-- Under /SF-SE-FB/Answers - FB/Exercice 1 - Answers, type:    
-  - `$ pipenv install` It will locates Pipfiles, creates a new virtual env and install the necessary packages to run the program
-  - `$ pipenv shell` : To launch the virtual environment and run the program that refers to packages stored on pipefiles  
-  - To get answer of Exercice 1, run:  `$ python3 Exercise1_launcher.py`    
-  - To get answer of Exercice 2, run:  `$ python3 Exercise2_launcher.py`     
-  - To get answer of Exercice 3, run:  `$ cd python3 Exercise3_launcher.py`
+- replace App ID, Admin API Key and SearchOnly API Key on index-configuration.js and app.js
+- run index-configuration.js
+ ```
+    node index-configuration.js
+ ```
+ 
+- open index.html for search for a new contact

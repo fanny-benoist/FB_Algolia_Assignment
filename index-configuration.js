@@ -1,14 +1,18 @@
-// For the default version
+// Initialize the client
 const algoliasearch = require('algoliasearch');
+
+// Replace by your value
+const app_id = 'XR3Z76W57K';
+const admin_api_key = '9d3a8945c39c0e97bb33a1c9934c9367';
 
 
 const client = algoliasearch(
-  'XR3Z76W57K',
-  '9d3a8945c39c0e97bb33a1c9934c9367'
+  app_id,
+  admin_api_key
 );
 
+// Push Data
 const index = client.initIndex('contact');
-
 const contactsJSON = require("./contact_dataset.json");
 index.saveObjects(contactsJSON, {
     autoGenerateObjectIDIfNotExist: true
@@ -16,32 +20,30 @@ index.saveObjects(contactsJSON, {
     console.log(objectIDs);
   });
 
-  index.setSettings({
-    'customRanking': ['desc(followers)']
-  }).then(() => {
-    // done
-  });
-
-  index.setSettings({
-    searchableAttributes: [
-      'lastname',
-      'firstname',
-      'company',
-      'email',
-      'city',
-      'address'
-    ]
-  }).then(() => {
-    // done
-  });
+// Configure
+index.setSettings({
+  'customRanking': ['desc(followers)']
+}).then(() => {
+  // done
+});
 
 index.setSettings({
-    attributesForFaceting: [
-        'searchable(city)',
-        'searchable(state)',
-        'searchable(followers)',
-        'searchable(company)'
+  searchableAttributes: [
+    'lastname',
+    'firstname',
+    'company'
     ]
-  }).then(() => {
-    // done
-  });
+}).then(() => {
+  // done
+});
+
+index.setSettings({
+  attributesForFaceting: [
+      'searchable(city)',
+      'searchable(state)',
+      'searchable(followers)',
+      'searchable(company)'
+  ]
+}).then(() => {
+  // done
+});
