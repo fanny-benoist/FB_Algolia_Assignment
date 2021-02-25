@@ -94,6 +94,7 @@ body {
 .hit {
   display: flex;
   padding: 16px;
+  
 }
 
 #hits {
@@ -117,9 +118,39 @@ body {
 }
 
 .hit-company {
+  font-size: 14px;
+  font-weight: bold;
   color: #999;
   text-align: center;
+  margin-bottom: 12px;
 }
+
+.hit-address {
+  font-size: 10px;
+  color: #999;
+  text-align: left;
+  line-height: 12px;
+  margin-bottom: 12px;
+}
+
+.hit-email {
+  font-size: 8px;
+  color: #999;
+  text-align: left;
+  line-height: 12px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.hit-web {
+  font-size: 8px;
+  color: #999;
+  text-align: left;
+  line-height: 12px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 
 .ais-ClearRefinements {
   margin: 5px 0 0px 150px;
