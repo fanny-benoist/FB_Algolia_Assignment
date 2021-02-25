@@ -98,9 +98,9 @@ search.addWidget(
     container: "#stats",
     templates: {
       body(hit) {
-        return `<span role="img" aria-label="emoji">⚡️</span> <strong>${hit.nbHits}</strong> results found ${
-          hit.query != "" ? `for <strong>"${hit.query}"</strong>` : ``
-        } in <strong>${hit.processingTimeMS}ms</strong>`;
+        return `<p> &#128073 <b>${hit.nbHits}</b> results found ${
+          hit.query != "" ? `for <b>"${hit.query}"</b>` : ``
+        } in <b>${hit.processingTimeMS}ms</b></p>`;
       }
     }
   })
@@ -111,7 +111,7 @@ search.addWidget(
     container: '#hits-per-page',
     items: [
       { label: '16 contacts per page', value: 16, default: true },
-      { label: '26 contacts per page', value: 26 },
+      { label: '24 contacts per page', value: 24 },
     ]
   })
 );

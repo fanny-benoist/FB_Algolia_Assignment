@@ -32,19 +32,18 @@ body {
   padding: 24px;
   line-height: 24px;
   overflow-y: scroll;
-  display: flex;
   font-family: "Open Sans", sans-serif;
   background: #f0f2f5;
-  flex-direction: column;
 }
 
 .search-container {
-  flex-grow: 1;
-  display: flex;
-  min-height: 100%;
-  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1rem;
 }
 
+.search-panel {
+  display: flex;
+}
 
 #state,
 #city, #company {
@@ -64,14 +63,11 @@ body {
 }
 
 .left-panel {
-  flex: 0 0 300px;
+  flex: 1;
 }
 
 .right-panel {
-  width: calc(100% - 306px);
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+  flex: 3;
 }
 
 #searchbox {
@@ -98,6 +94,14 @@ body {
 .hit {
   display: flex;
   padding: 16px;
+}
+
+#hits {
+  flex-grow: 1;
+}
+
+.ais-Hits-item {
+  background-color: #fff;
 }
 
 .hit-content {
@@ -217,7 +221,6 @@ footer {
 
 .ais-Pagination {
   display: flex;
-
   justify-content: center;
   align-items: center;
   text-align: center;
