@@ -4,7 +4,7 @@
 * [Setup](#setup)
 
 ## General info
-This folder contains the code files associated with the Part 1 & the of customer's questions of the Part 2.
+This folder contains the code files associated with the Part 1 & the answers of the Part 2.
 
 **Assignment:**   
 > • Choose a dataset, either from our list of public datasets (https://github.com/algolia/datasets), or you can go ahead and use your own from a different source if you’d like!
