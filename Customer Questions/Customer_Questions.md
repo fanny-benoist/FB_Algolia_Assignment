@@ -33,13 +33,13 @@
 >   ```JSON
 >    Copy
 >    {
-    >    "name": "Iphone 6 64Gb",
-    >    "brand": "Apple",
-    >    "color": "Gold",
-    >    "categories": ["smartphone", "phone", "electronics"],
-    >    "price": 789
-    >    }
-    >    ```
+>        "name": "Iphone 6 64Gb",
+>        "brand": "Apple",
+>        "color": "Gold",
+>        "categories": ["smartphone", "phone", "electronics"],
+>        "price": 789
+>    }
+>    ```
 >
 > - Regarding the **Custom Ranking** field, it accepts any type of numerical or boolean value that represents the relative relevance of your records.
 >

@@ -4,7 +4,7 @@
 * [Setup](#setup)
 
 ## General info
-This folder contains all code files associated with the Part 1 & Part 2.
+This folder contains the code files associated with the Part 1 & the of customer's questions of the Part 2.
 
 **Assignment:**   
 > • Choose a dataset, either from our list of public datasets (https://github.com/algolia/datasets), or you can go ahead and use your own from a different source if you’d like!
@@ -18,11 +18,13 @@ This folder contains all code files associated with the Part 1 & Part 2.
 > • Add your code to a publicly accessible Github repo and then publish it using Github’s gh-pages so we can interact with it.
 >
 > • Give Algolia admins access (https://www.algolia.com/users/sign_in) to your data so we can view your relevance settings.
+>
 > • Write up a few paragraphs outlining your project, what you intended to accomplish, and any feedback for Algolia you have and add these to a README.
 
 
 
 I created an app that calls Algolia search librairy to search for a person in a contact database. 
+
 Each records contains the attributes:
 - Last Name
 - First Name
@@ -40,11 +42,9 @@ Each records contains the attributes:
 You can search for a last name, a first name or a company.
 To help you get result faster, you can facet per company, state, county or followers depending on what you'r looking for.
 
-I created the index-configuration.js so that the index can be configure automatically while runn this js file, instead of having to configure manually on the dashboard. In this way, I assure the search experience will work as expected.
+I created the index-configuration.js so that the index can be configure automatically by running this js file, instead of having to configure manually the index on the dashboard. In this way, I assure the search experience will work as expected.
 
-You will notice that the front-end isn't perfectly finish. I would have required extra time to finish it. For inst
-
-But right now, you can try to search for your name, maybe you will get a result, who knows ? ;)
+You will notice that the front-end isn't perfectly finish, but right now, you can try to search for your name, maybe you will get a result, who knows ? 😉
 
 ## Contents
 - index-configuration.js: (To run)
@@ -63,7 +63,7 @@ But right now, you can try to search for your name, maybe you will get a result,
     - .src_search_ui/app.css: style front-end
 
 - Customer Questions:
-    - Contains answers of Customer questions
+    - Contains answers of customers' questions
 
 
 ## Setup
